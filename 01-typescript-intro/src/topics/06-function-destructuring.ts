@@ -1,4 +1,4 @@
-interface Product {
+export interface Product {
     description: string;
     price: number;
 }
@@ -18,7 +18,7 @@ interface TaxCalculatorOptions  {
     products: Product[];
 }
 
-function taxCalculator({products, tax}: TaxCalculatorOptions): [number, number] {
+export function taxCalculator({products, tax}: TaxCalculatorOptions): [number, number] {
     let total = 0;
     products.forEach(({price}) => {
         total += price
@@ -27,14 +27,15 @@ function taxCalculator({products, tax}: TaxCalculatorOptions): [number, number] 
     return [total, total * tax];
 }
 
-const shoppingCart = [phone, tablet];
+/* const shoppingCart = [phone, tablet];
 const tax = 0.15;
 
-const [subtotal, total] = taxCalculator({
+const [total, taxTotal] = taxCalculator({
     products: shoppingCart,
     tax
 });
 
-console.log('Sub Total: ', `$${subtotal.toFixed(2)}`)
-console.log('ITBMS: ', `$${Math.round(tax * 100).toFixed(2)}`);
-console.log('Total: ', `$${total.toFixed(2)}`)
+console.log('Sub Total: ', `$${total.toFixed(2)}`)
+console.log('ITBMS: ', `$${Math.round(taxTotal).toFixed(2)}`);
+console.log('Total: ', `$${total + taxTotal}`)
+*/
