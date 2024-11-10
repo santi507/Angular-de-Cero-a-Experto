@@ -6,10 +6,7 @@ import "./style.css";
 // import './topics/05-basic-destructuring'
 // import './topics/06-function-destructuring'
 // import './topics/07-import-export'
-import { Person } from "./topics/08-classes";
-
-const ironman = new Person("Ironman");
-console.log(ironman);
+import "./topics/08-classes";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   Hola mundo!   
